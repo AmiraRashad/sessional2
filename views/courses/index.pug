@@ -1,14 +1,14 @@
 extends ../layout
 
 block content
-  a(href="/router/courses/add",class="btn btn-success") Create New
+  a(href="/router/courses/add",class="btn btn-warning float-right") Create New
   table.table
     thead
         tr
             th Course Name
             th Course Id
-            th Course Duration(Hrs)
-            th Course Fee(USD)
+            th Course Duration
+            th Course Fee
     tbody
         each item in courses
             tr
@@ -17,5 +17,5 @@ block content
                 td=item.course_duration
                 td=item.course_fee
                 td
-                    a(href="/router/courses/edit/"+item._id,class="btn btn-warning mx-2") Edit
-                    a(href="/router/courses/delete/"+item._id,class="btn btn-danger") Delete
+                    a(href="/router/courses/edit/"+item._id,class="btn btn-outline-warning btn-sm mx-2") Edit
+                    a(href="/router/courses/delete/"+item._id,class="btn btn-outline-danger btn-sm") Delete
