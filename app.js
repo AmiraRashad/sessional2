@@ -41,7 +41,7 @@ app.use(function (err, req, res, next) {
 });
 
 mongoose
-    .connect("mongodb+srv://DBuser:amira123@cluster0.gdban.mongodb.net/Web?retryWrites=true&w=majority",
+    .connect("    mongodb://DBuser:amira123@cluster0-shard-00-00.gdban.mongodb.net:27017,cluster0-shard-00-01.gdban.mongodb.net:27017,cluster0-shard-00-02.gdban.mongodb.net:27017/Web?ssl=true&replicaSet=atlas-9konyg-shard-0&authSource=admin&retryWrites=true&w=majority",
     { useUnifiedTopology: true, useNewUrlParser: true }
   )
   .then(() => {
